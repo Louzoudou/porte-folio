@@ -63,5 +63,21 @@ $(document).on('click', 'a[href^="#"]', function(e) {
 });
 
 
- 
+$(document).ready(function() {
+    // Modifier la valeur si la hauteur de votre barre de navigation est différente
+    var navbarHeight = 80;
 
+    $('a[data-target]').click(function(e) {
+		e.preventDefault();
+	  
+		var targetId = $(this).data('target');
+		var targetOffsetTop = $(targetId).offset().top;
+	  
+		// Ajouter un délai avant l'animation de défilement
+		$('html, body').animate({
+			  scrollTop: targetOffsetTop - navbarHeight,
+			},
+			500
+		);
+	});
+  });
