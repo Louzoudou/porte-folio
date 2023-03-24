@@ -459,8 +459,9 @@ a:hover,a:focus {
 .logo-list li a:focus {
   opacity: 0.6;
   transition:  opacity 0.2s ease;
-  display: block; }
+  display: block; 
 }
+
 
 
 /* Footer */
@@ -531,4 +532,12 @@ footer p {
   }
 }
 
+.TitreCat {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.TitreSousCat {
+  text-align: center;
+}
 
