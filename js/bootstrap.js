@@ -946,7 +946,7 @@ if (typeof jQuery === 'undefined') {
   Modal.VERSION  = '3.3.6'
 
   Modal.TRANSITION_DURATION = 300
-  Modal.BACKDROP_TRANSITION_DURATION = 150
+  Modal.BACKDROP_TRANSITION_DURATION = 30
 
   Modal.DEFAULTS = {
     backdrop: true,
