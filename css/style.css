@@ -747,6 +747,24 @@ filter: drop-shadow(0px 0px 0px hsla(0, 0%, 100%, 0.5))
 .caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel img:nth-child(8){transform:rotateY(315deg) translateZ(540px) scale(1);opacity:1}
 
 
+
+/*Asgarth*/
+
+.div {
+  height: 500px;
+  position: relative;
+  border: 0px solid 
+}
+
+ .image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+
 .moi {
   height: 400px;
   width: 400px;
