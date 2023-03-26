@@ -311,7 +311,13 @@ a:hover,a:focus {
 .hovereffect .photo-13,
 .hovereffect .photo-14,
 .hovereffect .photo-15,
-.hovereffect .photo-16
+.hovereffect .photo-16,
+.hovereffect .photo-17,
+.hovereffect .photo-18,
+.hovereffect .photo-19,
+.hovereffect .photo-20
+
+
 
 
 {
@@ -342,7 +348,11 @@ a:hover,a:focus {
 .hovereffect:hover .photo-13,
 .hovereffect:hover .photo-14,
 .hovereffect:hover .photo-15,
-.hovereffect:hover .photo-16
+.hovereffect:hover .photo-16,
+.hovereffect:hover .photo-17,
+.hovereffect:hover .photo-18,
+.hovereffect:hover .photo-19,
+.hovereffect:hover .photo-20
 {
   opacity: 0.4;
   filter: alpha(opacity=40);
@@ -350,9 +360,9 @@ a:hover,a:focus {
   transform: translate3d(0,0,0);
 }
 
-.photo-1,.photo-2,.photo-3,.photo-4,.photo-5,.photo-6,.photo-7,.photo-8,.photo-9,.photo-10,.photo-11,.photo-12,.photo-13,.photo-14,.photo-15,.photo-16{
+.photo-1,.photo-2,.photo-3,.photo-4,.photo-5,.photo-6,.photo-7,.photo-8,.photo-9,.photo-10,.photo-11,.photo-12,.photo-13,.photo-14,.photo-15,.photo-16,.photo-17,.photo-18,.photo-19,.photo-20{
 	background-size:cover;
-	height:100vh;
+	height: 800px;;
 	width:100%;
 	background-position:center;
 }
@@ -375,6 +385,10 @@ a:hover,a:focus {
 .photo-14 {background-image: url('../img/14.jpg');}
 .photo-15 {background-image: url('../img/15.jpg');}
 .photo-16 {background-image: url('../img/16.jpg');}
+.photo-17 {background-image: url('../img/17.jpg');}
+.photo-18 {background-image: url('../img/18.jpg');}
+.photo-19 {background-image: url('../img/19.jpg');}
+.photo-20 {background-image: url('../img/20.jpg');}
 /* Modal Box */
 
 .modal-dialog {
@@ -596,3 +610,129 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+
+/*****carrousel 3d avec navigation*****/
+
+*{box-sizing: border-box}
+
+
+img{max-width:100%}
+	
+	
+	
+	
+	
+.caroussel_diapo input{
+
+position: absolute;
+left: -9999px
+
+}
+    
+
+.caroussel_diapo{
+
+position: relative;
+text-align: center;
+margin: 0 auto
+
+}
+
+
+.contenu_carou {
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.caroussel{
+
+transform-style: preserve-3d;
+position: relative;
+width: 500px;
+height: 950px;
+transition: 1s
+	
+	}
+
+.caroussel img {
+	
+position: absolute;
+top: 0;
+left: 0;
+outline: 1px solid transparent;
+backface-visibility: hidden;
+transition: 1s
+	
+	}
+
+.caroussel img{
+
+filter: blur(3px);
+opacity: .8
+
+}	
+
+.caroussel img:nth-child(1){transform:translate3d(0,0,540px) scale(.8)}
+.caroussel img:nth-child(2){transform:rotateY(45deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(3){transform:rotateY(90deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(4){transform:rotateY(135deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(5){transform:rotateY(180deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(6){transform:rotateY(225deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(7){transform:rotateY(270deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(8){transform:rotateY(315deg) translateZ(540px) scale(.8)}
+
+.caroussel_diapo input[type=radio] + label {
+	
+cursor:pointer;
+background:hsl(203,77%,81%);
+display:inline-block;
+width:20px;
+border-radius:50%;
+height:20px
+	
+	}
+	
+.caroussel_diapo input[type=radio]:checked + label{
+
+background:hsl(203,77%,61%)
+
+}
+
+.caroussel_diapo label{
+
+background:hsl(203,77%,61%)
+
+}
+
+
+
+.caroussel_diapo input[name="rotation"]:checked ~ .contenu_carou .caroussel img:nth-child(n){
+	
+filter: drop-shadow(12px 12px 7px hsla(0,0%,0%,.5))
+	
+}	
+
+/*gauche*/
+.caroussel_diapo #carou_un:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px)}
+.caroussel_diapo #carou_deux:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-45deg)}
+.caroussel_diapo #carou_trois:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-90deg)}
+.caroussel_diapo #carou_quatre:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-135deg)}
+.caroussel_diapo #carou_cinq:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-180deg)}
+.caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-225deg)}
+.caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-270deg)}
+.caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-315deg)}
+
+
+/*droite*/
+.caroussel_diapo #carou_un:checked ~ .contenu_carou .caroussel img:nth-child(1){transform:translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_deux:checked ~ .contenu_carou .caroussel img:nth-child(2){transform:rotateY(45deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_trois:checked ~ .contenu_carou .caroussel img:nth-child(3){transform:rotateY(90deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_quatre:checked ~ .contenu_carou .caroussel img:nth-child(4){transform:rotateY(135deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_cinq:checked ~ .contenu_carou .caroussel img:nth-child(5){transform:rotateY(180deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel img:nth-child(6){transform:rotateY(225deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel img:nth-child(7){transform:rotateY(270deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel img:nth-child(8){transform:rotateY(315deg) translateZ(540px) scale(1);opacity:1}
