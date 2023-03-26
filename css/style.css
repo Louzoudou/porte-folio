@@ -186,12 +186,12 @@ a:hover,a:focus {
 .big-letter p:first-child:first-letter { 
 	float: left; 
 	color: #222; 
-	font-size: 8em;  
+	font-size: 7em;  
 	line-height: 0.8em; 
 	text-transform: uppercase; 
 	padding-top: 0px;  
 	padding-right: 0.1em; 
-	padding-left: –0.03em;	
+	padding-left: –0.03em;
 }
 
 /* Firefox Fix */
@@ -745,3 +745,21 @@ filter: drop-shadow(0px 0px 0px hsla(0, 0%, 100%, 0.5))
 .caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel img:nth-child(6){transform:rotateY(225deg) translateZ(540px) scale(1);opacity:1}
 .caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel img:nth-child(7){transform:rotateY(270deg) translateZ(540px) scale(1);opacity:1}
 .caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel img:nth-child(8){transform:rotateY(315deg) translateZ(540px) scale(1);opacity:1}
+
+
+.moi {
+  height: 400px;
+  width: 400px;
+}
+.moi-container {
+  /*Alignement horizontal*/
+  display: flex;
+  justify-content: center;
+  /*Alignement vertical*/
+  align-items: center;
+}
+
+.about-me-center {
+  margin-top: 45px;
+}
+
