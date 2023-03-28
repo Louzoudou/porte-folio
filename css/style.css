@@ -248,7 +248,7 @@ a:hover,a:focus {
   cursor:pointer;
 }
 
-.hovereffect a, .hovereffect p,.hovereffect h2 {
+.hovereffect a, .hovereffect p,.hovereffect h2, .hovereffect h2  {
   color: #fff;
   text-decoration:none;
   opacity: 0;
@@ -604,7 +604,7 @@ footer p {
 }
 
 footer {
-  background-color: #000000;
+  background-color: #757575;
   height: 80px;
   width: 100%;
   padding: 20px 0;
@@ -748,36 +748,66 @@ filter: drop-shadow(0px 0px 0px hsla(0, 0%, 100%, 0.5))
 
 
 
-/*Asgarth*/
 
-.div {
+/*.div {
   height: 500px;
   position: relative;
   border: 0px solid 
 }
 
- .image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.image {
+text-align: center; 
+}*/
+
+.video-responsive {
+  overflow:hidden;
+  padding-bottom:56.25%; 
+  position:relative;
+  height:0;
+ }
+ .video-responsive iframe {
+  left:50%;
+  top:30%;
   transform: translate(-50%, -50%);
-  
-}
+  height:40%;
+  width:40%;
+  position:absolute;
+  border-radius: 15px;
+ }
 
 
-.moi {
-  height: 400px;
-  width: 400px;
-}
-.moi-container {
-  /*Alignement horizontal*/
+ .image-container {
   display: flex;
   justify-content: center;
-  /*Alignement vertical*/
-  align-items: center;
 }
 
-.about-me-center {
-  margin-top: 45px;
+.image-box {
+  margin: 0 25px;
+  text-align: center;
+  position: relative; /* Ajout */
+}
+
+img {
+  width: 500px;
+  height: auto;
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out; /* Ajout */
+}
+
+.image-box:hover img {
+  transform: scale(1.1); /* Ajout */
+}
+
+h3 {
+  margin-top: 25px; 
+  text-align: center; 
+  transition: transform 0.3s ease-in-out;
+  font-size: 30px; /* Ajout */
+  font-family: 'Open Sans', sans-serif; /* Ajout */
+}
+
+.image-box:hover h3 {
+  transform: translateY(10px); /* Ajout */
+
 }
 
