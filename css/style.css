@@ -779,6 +779,7 @@ text-align: center;
  .image-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .image-box {
@@ -811,3 +812,13 @@ h3 {
 
 }
 
+a {
+  text-decoration: none !important;
+}
+a :hover{
+  text-decoration: none !important;
+}
+
+#Graphisme {
+  margin-bottom: 40px;
+}
